@@ -12,13 +12,13 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'docker image build -t shaikkhajaibrahim/spc:latest .'
+                sh 'docker image build -t bharatnar/spc:latest .'
             }
         }
         stage('scan and push') {
             steps {
-                sh 'echo docker scan shaikkhajaibrahim/spc:latest'
-                sh 'docker image push shaikkhajaibrahim/spc:latest'
+                sh 'echo docker scan bharatnar/spc:latest'
+                sh 'docker image push bharatnar/spc:latest'
             }
         }
     }
